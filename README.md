@@ -1,39 +1,49 @@
+<!--
+ * @Date: 2020-02-13 16:18:19
+ * @LastEditors: code
+ * @Author: code
+ * @LastEditTime: 2020-02-17 23:38:11
+ -->
+
 # sports-scu-data
 
-#### 介绍
-{**以下是码云平台说明，您可以替换此简介**
-码云是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+## 简介
 
-#### 软件架构
-软件架构说明
+四川大学创高体育理论考试试卷在线搜索
 
+[在线使用](https://lisonge.gitee.io/scu-sports-data/index.html)
 
-#### 安装教程
+## 详情
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+收集原始试卷8540张HTML，不重复试卷1089，不重复题目3992
 
-#### 使用说明
+科目数20，判断题2045，单选题1787，多选题160
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+数字与科目对应关系如下
 
-#### 参与贡献
+```json
+{
+    1 : "橄榄球",
+    2 : "健美操",
+    3 : "击剑",
+    4 : "篮球",
+    5 : "排球",
+    6 : "排舞",
+    7 : "乒乓球",
+    8 : "气排球",
+    9 : "散手",
+    10 : "射箭",
+    11 : "社交舞",
+    12 : "太极拳",
+    13 : "跆拳道",
+    14 : "网球",
+    15 : "校园定向",
+    16 : "艺术体操",
+    17 : "瑜伽",
+    18 : "羽毛球",
+    19 : "自卫防身",
+    20 : "足球"
+}
+```
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+云数据库[LeanCloud](https://www.leancloud.cn/)
