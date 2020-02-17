@@ -2,7 +2,7 @@
  * @Date: 2020-02-13 16:18:19
  * @LastEditors: code
  * @Author: code
- * @LastEditTime: 2020-02-18 00:06:28
+ * @LastEditTime: 2020-02-18 00:17:10
  -->
 
 # sports-scu-data
@@ -15,7 +15,7 @@
 
 注意：码云Pages有时会抽风可能无法使用
 
-## 详情
+## 数据
 
 收集原始试卷8540张HTML，提取不重复试卷1089，不重复题目3992
 
@@ -48,4 +48,8 @@
 }
 ```
 
-云数据库[LeanCloud](https://www.leancloud.cn/)
+## 结构
+
+前端展示：[GiteePages](https://gitee.com/)
+
+后端数据：[LeanCloud](https://www.leancloud.cn/)
