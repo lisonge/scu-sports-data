@@ -13,6 +13,8 @@
 
 [在线使用](https://lisonge.gitee.io/scu-sports-data/index.html)
 
+注意：码云Pages有时会抽风可能无法使用
+
 ## 详情
 
 收集原始试卷8540张HTML，不重复试卷1089，不重复题目3992
