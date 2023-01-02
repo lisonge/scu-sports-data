@@ -16,7 +16,7 @@
 
 科目数 20，判断题 2045，单选题 1787，多选题 160
 
-更改信息见 [master](https://github.com/lisonge/scu-sports-data/tree/master) 分支
+更多信息见 [master](https://github.com/lisonge/scu-sports-data/tree/master) 分支
 
 ## 其他
 
