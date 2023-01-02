@@ -1,0 +1,12 @@
+body {
+  position: relative;
+  cursor: pointer;
+  visibility: hidden;
+  user-select: none;
+  text-align: center;
+  & > div {
+    &:first-child {
+      display: block;
+    }
+  }
+}
