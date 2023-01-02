@@ -3,10 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   '@solidjs/router': 0.6.0
   '@types/node': 18.11.18
+  '@vitejs/plugin-legacy': 3.0.1
   localforage: 1.10.0
   node-html-parser: 6.1.4
   normalize.css: 8.0.1
   solid-js: 1.6.6
+  terser: 5.16.1
   tsx: 3.12.1
   typescript: 4.9.4
   unocss: 0.48.0
@@ -17,14 +19,16 @@ specifiers:
 dependencies:
   '@solidjs/router': 0.6.0_solid-js@1.6.6
   '@types/node': 18.11.18
+  '@vitejs/plugin-legacy': 3.0.1_terser@5.16.1+vite@4.0.3
   localforage: 1.10.0
   node-html-parser: 6.1.4
   normalize.css: 8.0.1
   solid-js: 1.6.6
+  terser: 5.16.1
   tsx: 3.12.1
   typescript: 4.9.4
   unocss: 0.48.0_vite@4.0.3
-  vite: 4.0.3_@types+node@18.11.18
+  vite: 4.0.3_qfz55zahqkp66vn23sxaaw3yfe
   vite-plugin-solid: 2.5.0_solid-js@1.6.6+vite@4.0.3
   vite-tsconfig-paths: 4.0.3_p2fwcaxbionflq6hjivvbcsv5a
 
@@ -318,6 +322,11 @@ packages:
       '@babel/plugin-transform-typescript': 7.20.7_@babel+core@7.20.7
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@babel/standalone/7.20.11:
+    resolution: {integrity: sha512-WUPlwwXFk3iViGE7QFVVp423eVtT+eoXu1940Xu4QJgqgHBF6WWtlwO1Ip5rIWQnp7OHrGdwrwKLtLhUVfOZbA==}
+    engines: {node: '>=6.9.0'}
     dev: false
 
   /@babel/template/7.20.7:
@@ -637,6 +646,13 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: false
 
+  /@jridgewell/source-map/0.3.2:
+    resolution: {integrity: sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw==}
+    dependencies:
+      '@jridgewell/gen-mapping': 0.3.2
+      '@jridgewell/trace-mapping': 0.3.17
+    dev: false
+
   /@jridgewell/sourcemap-codec/1.4.14:
     resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==}
     dev: false
@@ -859,9 +875,31 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.2.12
       magic-string: 0.27.0
-      vite: 4.0.3_@types+node@18.11.18
+      vite: 4.0.3_qfz55zahqkp66vn23sxaaw3yfe
     transitivePeerDependencies:
       - rollup
+    dev: false
+
+  /@vitejs/plugin-legacy/3.0.1_terser@5.16.1+vite@4.0.3:
+    resolution: {integrity: sha512-XCtEjxoR3rmy000ujYRBp5kggWqzHz9+F20/yIMUWOzbvu0+KW1e14Fvb8h7SpNn+bfjGW1RiAs1Vrgb7Js+iQ==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      terser: ^5.4.0
+      vite: ^4.0.0
+    dependencies:
+      '@babel/standalone': 7.20.11
+      core-js: 3.27.1
+      magic-string: 0.27.0
+      regenerator-runtime: 0.13.11
+      systemjs: 6.13.0
+      terser: 5.16.1
+      vite: 4.0.3_qfz55zahqkp66vn23sxaaw3yfe
+    dev: false
+
+  /acorn/8.8.1:
+    resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
     dev: false
 
   /ansi-styles/3.2.1:
@@ -985,12 +1023,21 @@ packages:
     resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
     dev: false
 
+  /commander/2.20.3:
+    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+    dev: false
+
   /consola/2.15.3:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
     dev: false
 
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
+    dev: false
+
+  /core-js/3.27.1:
+    resolution: {integrity: sha512-GutwJLBChfGCpwwhbYoqfv03LAfmiz7e7D/BNxzeMxwQf10GRSzqiOjx7AmtEk+heiD/JWmBuyBPgFtx0Sg1ww==}
+    requiresBuild: true
     dev: false
 
   /cross-spawn/7.0.3:
@@ -1741,6 +1788,10 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /regenerator-runtime/0.13.11:
+    resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
+    dev: false
+
   /resolve/1.22.1:
     resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
     hasBin: true
@@ -1853,6 +1904,21 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: false
+
+  /systemjs/6.13.0:
+    resolution: {integrity: sha512-P3cgh2bpaPvAO2NE3uRp/n6hmk4xPX4DQf+UzTlCAycssKdqhp6hjw+ENWe+aUS7TogKRFtptMosTSFeC6R55g==}
+    dev: false
+
+  /terser/5.16.1:
+    resolution: {integrity: sha512-xvQfyfA1ayT0qdK47zskQgRZeWLoOQ8JQ6mIgRGVNwZKdQMU+5FkCBjmv4QjcrTzyZquRw2FVtlJSRUmMKQslw==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jridgewell/source-map': 0.3.2
+      acorn: 8.8.1
+      commander: 2.20.3
+      source-map-support: 0.5.21
     dev: false
 
   /to-fast-properties/2.0.0:
@@ -1976,7 +2042,7 @@ packages:
       merge-anything: 5.1.4
       solid-js: 1.6.6
       solid-refresh: 0.4.1_solid-js@1.6.6
-      vite: 4.0.3_@types+node@18.11.18
+      vite: 4.0.3_qfz55zahqkp66vn23sxaaw3yfe
       vitefu: 0.2.4_vite@4.0.3
     transitivePeerDependencies:
       - supports-color
@@ -1990,13 +2056,13 @@ packages:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 2.0.2_typescript@4.9.4
-      vite: 4.0.3_@types+node@18.11.18
+      vite: 4.0.3_qfz55zahqkp66vn23sxaaw3yfe
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: false
 
-  /vite/4.0.3_@types+node@18.11.18:
+  /vite/4.0.3_qfz55zahqkp66vn23sxaaw3yfe:
     resolution: {integrity: sha512-HvuNv1RdE7deIfQb8mPk51UKjqptO/4RXZ5yXSAvurd5xOckwS/gg8h9Tky3uSbnjYTgUm0hVCet1cyhKd73ZA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2026,6 +2092,7 @@ packages:
       postcss: 8.4.20
       resolve: 1.22.1
       rollup: 3.8.1
+      terser: 5.16.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: false
@@ -2038,7 +2105,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.0.3_@types+node@18.11.18
+      vite: 4.0.3_qfz55zahqkp66vn23sxaaw3yfe
     dev: false
 
   /which/2.0.2:
