@@ -8,7 +8,11 @@
 
 ## 在线使用
 
-<https://scu-sports-data.vercel.app/>
+大陆站点 <https://www.wulihub.com.cn/gc/QLOP4a/index.html>
+
+vercel <https://scu-sports-data.vercel.app>
+
+netlify <https://scu-sports-data.netlify.app>
 
 ## 数据
 
