@@ -35,13 +35,19 @@ export const type2name: Record<number, string> = {
   3: `多选题`,
 };
 
+const globStore: Record<string, CombineCourse> = {};
 export const getCombineCourse = async (id: string): Promise<CombineCourse> => {
   const key = `/_combine/${id}.json`;
+  if (globStore[key]) {
+    return globStore[key];
+  }
   let text = await localforage.getItem<string>(key);
   if (!text) {
     const resp = await fetch(key);
     text = await resp.text();
     localforage.setItem(key, text);
   }
-  return JSON.parse(text);
+  const c = JSON.parse(text);
+  globStore[key] = c;
+  return c;
 };

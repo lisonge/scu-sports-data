@@ -23,10 +23,9 @@ export const debounce = <T extends (...args: any[]) => void>(fn: T, n = 0) => {
 };
 
 /**
- * 注意不能在 if 和 for/while 中调用
- * 缓存 路由根组件 的数据，由于 solid-router 目前没有 history api，导致数据无法回收
+ * 适用于单实例组件的状态缓存
  */
-export const createCacheSignal = (() => {
+export const createCacheStore = () => {
   const cacheSignals: unknown[] = [];
   let count = 0;
   return function <T>(value: T, options?: SignalOptions<T>): Signal<T> {
@@ -48,4 +47,4 @@ export const createCacheSignal = (() => {
     count++;
     return [s, set];
   };
-})();
+};

@@ -1,10 +1,11 @@
 import QuestionCard from "@/components/QuestionCard";
 import { getCombineCourse, id2name, ids, type2name } from "@/config";
 import type { CombineCourse, Paper, Question } from "@/types";
-import { createCacheSignal } from "@/utils";
+import { createCacheStore } from "@/utils";
 import { useNavigate } from "@solidjs/router";
 import { For } from "solid-js";
 
+const createCacheSignal = createCacheStore();
 export default function Search() {
   const navigate = useNavigate();
   const [value, setValue] = createCacheSignal(``);
