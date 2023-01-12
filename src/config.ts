@@ -37,7 +37,7 @@ export const type2name: Record<number, string> = {
 
 const globStore: Record<string, CombineCourse> = {};
 export const getCombineCourse = async (id: string): Promise<CombineCourse> => {
-  const key = `${import.meta.env.BASE_URL}_combine/${id}.json`;
+  const key = `https://cdn.jsdelivr.net/gh/lisonge/scu-sports-data@main/public/_combine/${id}.json`;
   if (globStore[key]) {
     return globStore[key];
   }
